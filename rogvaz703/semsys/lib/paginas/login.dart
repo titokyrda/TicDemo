@@ -70,39 +70,30 @@ class _PaginaLoginState extends State<PaginaLogin> {
       //mainAxisAlignment: MainAxisAlignment.center,
       //crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
-        Expanded(
-          child:Image.asset('assets/icon/icono_carta.jpg'),
-          flex: 2,
-        ),
-        Expanded(
-          //fit: BoxFit.fitHeight,
-          child: Column(
+        Image.asset('assets/icon/icono_carta.jpg'),
+        Column(
             children: <Widget>[
               Text('Registra tu Correo Electrónico @msev',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontFamily: 'NeoSans',
+                    //fontFamily: 'NeoSans',
                     fontWeight: FontWeight.bold,
                     fontSize: 15.0,
                   ),
-              ),
-                      
+              ),      
               Text('es necesario usar la cuenta asignada por la Secretaría de Educación de Veracruz',
                   textAlign: TextAlign.center, 
                     style: TextStyle(
                       color: Colors.black45,
-                      fontFamily: 'NeoSans',
+                      //fontFamily: 'NeoSans',
                       fontSize: 15.0,
                     ),
               ),
               
             ]
-          )
-        ),
-        Expanded(
-           //fit: BoxFit.none,
-           child: _correoMSEV(),
-        ),
+          ),
+          Divider(),
+        _correoMSEV(),
       ],
      
     );
@@ -114,14 +105,13 @@ class _PaginaLoginState extends State<PaginaLogin> {
       //textCapitalization: TextCapitalization.sentences,
       keyboardType: TextInputType.emailAddress,
       decoration: InputDecoration(
-        border: OutlineInputBorder(
+          border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10.0),
         ),
         hintText: 'Correo Electronico MSEV',
         labelText: 'Correo Electronico MSEV',
         suffixIcon: Icon(Icons.alternate_email),
         icon: Icon(Icons.email),
-        fillColor: Colors.red,
       ),
       onChanged: (valor){
         setState((){

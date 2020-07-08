@@ -14,6 +14,12 @@ class MyApp extends StatelessWidget{
     return MaterialApp(
       title: 'SEMSyS Noticias',
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        brightness: Brightness.light,
+        primaryColor: Colors.redAccent[700]      ,
+        accentColor: Colors.redAccent[400],
+        fontFamily: 'NeoSans',
+      ),
       home: PaginaLogin(),
       //theme: Theme(data: null, child: null),
     );
