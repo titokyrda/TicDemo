@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:semsys/paginas/principal.dart';
+
+import 'package:semsys/paginas/login.dart';
+
+//import 'package:semsys/paginas/principal.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,7 +14,7 @@ class MyApp extends StatelessWidget{
     return MaterialApp(
       title: 'SEMSyS Noticias',
       debugShowCheckedModeBanner: false,
-      home: PaginaPrincipal(),
+      home: PaginaLogin(),
       //theme: Theme(data: null, child: null),
     );
   }
